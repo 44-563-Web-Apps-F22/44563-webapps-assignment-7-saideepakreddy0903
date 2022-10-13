@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Reaction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -11,8 +12,9 @@
         }
     </style>
 </head>
+
 <body>
-<h2>Deepak Reddy reaction timer</h2>
+    <h2>Deepak Reddy reaction timer</h2>
     <br>
     <div class="container border" style="background-color: gold">
         <p class="font-weight-normal" id="target"> Your time</p>
@@ -23,8 +25,8 @@
     <br>
     <div class="container">
         <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
-
         <button type="button" class="btn btn-info" onclick="recordReact()">React Now</button>
+        <button type="button" class="btn btn-secondary" onclick="randomStart()">Random Start</button>
     </div>
     <script>
         var myTime = undefined
@@ -49,6 +51,12 @@
                 }
             }, startCount * 1000)
         }
+        function randomStart() {
+            startCount = Math.floor(Math.random() * (10 - 2 + 1) + 2)
+            startTime()
+
+        }
     </script>
 </body>
+
 </html>
